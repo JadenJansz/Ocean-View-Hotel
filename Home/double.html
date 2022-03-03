@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Book Your Stay</title>
+        <link rel="icon" type="image/png" href="images/icon.png">
+        <link rel="stylesheet" href="room.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/8e5cb1bab9.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+         <!--Header-->
+         <section class="header">
+            <nav>
+                <a href="home.html"><img src="images/logo1.png"></a>
+            </nav>
+            <div class="text-box">
+                <h1>Ocean View Hotel </h1>
+                <br>
+                <h2>Colombo</h2>          
+                <br>
+            </div>
+        </section>
+        <br><br>
+
+        <!--Room Types-->
+        <section class="rooms">
+            <h1>Pick Your Desired Room</h1>
+            
+            <div class="rooms-row">
+                <a  onclick="setValues('DSR1',10000)">
+                <div class="room-hotel">
+                    <!--<div class="room-details">-->
+                        <img src="images/double1.jpg">
+                    <div class="room-details">
+                    <h2>Double - Silver Package</h2>
+                    <h3>(Facing the Town)</h3>
+                    <h4>LKR 10,000.00</h3>
+                    <P>
+                     - Payment cancellation. <i class="fas fa-check"></i><br>
+                     - Breakfast. <i class="fas fa-check"></i><br>
+                     - Air Conditioned. <i class="fas fa-times"></i><br>
+                     - Restaurant & Bar services. <i class="fas fa-times"></i><br>
+                     - Pool services. <i class="fas fa-times"></i><br>
+                    </P>
+                    </div>
+                </div>
+                </a>
+                <a  onclick="setValues('DGR1',12000)">
+                <div class="room-hotel">
+                    <img src="images/double1.jpg">
+                    <h2>Double - Gold Package</h2>
+                    <h3>(Facing the Town)</h3>
+                    <h4>LKR 12,000.00</h3>
+                    <p> - Payment cancellation. <i class="fas fa-check"></i><br>
+                        - Breakfast. <i class="fas fa-check"></i><br>
+                        - Air Conditioned. <i class="fas fa-check"></i><br>
+                        - Restaurant & Bar services. <i class="fas fa-check"></i><br>
+                        - Pool services. <i class="fas fa-times"></i><br></p>
+                </div>
+                </a>
+                <a  onclick="setValues('DPR1',14000)">
+                <div class="room-hotel">
+                    <img src="images/double1.jpg">
+                    <h2>Double - Platinum Package</h2>
+                    <h3>(Facing the Town & Jaccuzi Included)</h3>
+                    <h4>LKR 14,000.00</h3>
+                    <p> - Payment cancellation. <i class="fas fa-check"></i><br>
+                        - Breakfast. <i class="fas fa-check"></i><br>
+                        - Air Conditioned. <i class="fas fa-check"></i><br>
+                        - Restaurant & Bar services. <i class="fas fa-check"></i><br>
+                        - Pool services. <i class="fas fa-check"></i><br>
+                </div>
+            </a>
+            </div>
+                
+            <div class="rooms-row">
+                <a  onclick="setValues('DSR2',11000)">
+                <div class="room-hotel">
+                    <img src="images/double2.jpg">
+                    <h2>Double - Silver Package</h2>
+                    <h3>(Facing the Pool)</h3>
+                    <h4>LKR 11,000.00</h3>
+                    <P>
+                     - Payment cancellation. <i class="fas fa-check"></i><br>
+                     - Breakfast. <i class="fas fa-check"></i><br>
+                     - Air Conditioned. <i class="fas fa-times"></i><br>
+                     - Restaurant & Bar services. <i class="fas fa-times"></i><br>
+                     - Pool services. <i class="fas fa-times"></i><br>
+                    </P>
+                </div>
+                 </a>
+                <a  onclick="setValues('DGR2',13000)">
+                <div class="room-hotel">
+                    <img src="images/double2.jpg">
+                    <h2>Double - Gold Package</h2>
+                    <h3>(Facing the Pool)</h3>
+                    <h4>LKR 13,000.00</h3>
+                    <p> - Payment cancellation. <i class="fas fa-check"></i><br>
+                        - Breakfast. <i class="fas fa-check"></i><br>
+                        - Air Conditioned. <i class="fas fa-check"></i><br>
+                        - Restaurant & Bar services. <i class="fas fa-check"></i><br>
+                        - Pool services. <i class="fas fa-times"></i><br></p>
+                </div>
+                </a>
+                <a  onclick="setValues('DPR2',15000)">
+                <div class="room-hotel">
+                    <img src="images/double2.jpg">
+                    <h2>Double - Platinum Package</h2>
+                    <h3>(Facing the Pool & Jaccuzi Included)</h3>
+                    <h4>LKR 15,000.00</h3>
+                    <p> - Payment cancellation. <i class="fas fa-check"></i><br>
+                        - Breakfast. <i class="fas fa-check"></i><br>
+                        - Air Conditioned. <i class="fas fa-check"></i><br>
+                        - Restaurant & Bar services. <i class="fas fa-check"></i><br>
+                        - Pool services. <i class="fas fa-check"></i><br>
+                </div>
+            </div>
+            </a>
+            <div class="rooms-row">
+                <a  onclick="setValues('DSR3',12000)">
+                <div class="room-hotel">
+                    <img src="images/double3.jpg">
+                    <h2>Double - Silver Package</h2>
+                    <h3>(Facing the Beach)</h3>
+                    <h4>LKR 12,000.00</h3>
+                    <P>
+                     - Payment cancellation. <i class="fas fa-check"></i><br>
+                     - Breakfast. <i class="fas fa-check"></i><br>
+                     - Air Conditioned. <i class="fas fa-times"></i><br>
+                     - Restaurant & Bar services. <i class="fas fa-times"></i><br>
+                     - Pool services. <i class="fas fa-times"></i><br>
+                    </P>
+                </div>
+                </a>
+                <a  onclick="setValues('DGR3',14000)">
+                <div class="room-hotel">
+                    <img src="images/double3.jpg">
+                    <h2>Double - Gold Package</h2>
+                    <h3>(Facing the Beach)</h3>
+                    <h4>LKR 14,000.00</h3>
+                    <p> - Payment cancellation. <i class="fas fa-check"></i><br>
+                        - Breakfast. <i class="fas fa-check"></i><br>
+                        - Air Conditioned. <i class="fas fa-check"></i><br>
+                        - Restaurant & Bar services. <i class="fas fa-check"></i><br>
+                        - Pool services. <i class="fas fa-times"></i><br></p>
+                </div>
+                </a>
+                <a  onclick="setValues('DPR3',16000)">
+                <div class="room-hotel">
+                    <img src="images/double3.jpg">
+                    <h2>double - Platinum Package</h2>
+                    <h3>(Facing the Beach & Jaccuzi Included)</h3>
+                    <h4>LKR 16,000.00</h3>
+                    <p> - Payment cancellation. <i class="fas fa-check"></i><br>
+                        - Breakfast. <i class="fas fa-check"></i><br>
+                        - Air Conditioned. <i class="fas fa-check"></i><br>
+                        - Restaurant & Bar services. <i class="fas fa-check"></i><br>
+                        - Pool services. <i class="fas fa-check"></i><br>
+                </div>
+                </a>
+            </div>
+        </section>
+
+        <!--Footer-->
+        <section>
+            <div class="footer">
+                <div class="logo">
+                    <img src="images/logo1.png" width="200"><br><br>
+                    <a href="TermsAndConditions.html">Terms and Conditons</a> | <a href="privacy.html">Privacy Policy</a>
+                </div>
+                <div class="logo">
+                    <ul type="none">
+                    <li><i class="fa fa-home fa-lg"></i>&nbsp 35 College Avenue,<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Dehiwala,<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Mount Lavinia</li><br>
+                    <li><i class="fa fa-envelope"></i>&nbsp&nbsp; oceanviewcolombo@gmail.com</li><br>
+                    <li><i class="fa fa-phone-square-alt fa-lg"></i>&nbsp&nbsp; 0715639188</li><br>
+                    <li>Follow Us</li>
+                    </ul>
+                    <i class="fa fa-facebook-official fa-lg"></i>&nbsp&nbsp;
+                    <i class="fa fa-twitter-square fa-lg"></i>&nbsp&nbsp;
+                    <i class="fa fa-instagram fa-lg"></i>&nbsp&nbsp;
+                </div>
+                <div class="logo">
+                    <p>Subscribe for offers and<br> more</p>
+                    <input type="email" name="email" size="35" placeholder="Enter Your Email">
+                    <button style="margin-left: 0%; padding: 9px;" type="submit" name="subscibe" value="Subscribe">Subscribe</button><br><br>
+                    <p style="font-size: 12px;">All copyrights reserved by Hotel Ocean View <i class="fa fa-copyright"></i></p>
+                </div>
+            </div>
+        </section>
+        <hr style="height: 10px; width: 100%; background-color: rgb(20, 136, 245); color:rgb(20, 136, 245); border-width: 0;" >
+        <script type="text/javascript" src="room.js"></script>
+    </body>
+</html>

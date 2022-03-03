@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="xmllol.xsl"?>
+
+<Items>
+    <Item>
+        <Code>100</Code>
+        <Description>2200 Watt Gas Powered Generators</Description>
+        <Price>75,000</Price>
+    </Item>
+    <Item>
+        <Code>200</Code>
+        <Description>1500 Watt Inverter Generators</Description>
+        <Price>92,000</Price>
+    </Item>
+    <Item>
+        <Code>300</Code>
+        <Description>2000 Watt Liquid Propane Generators</Description>
+        <Price>86,000</Price>
+    </Item>
+</Items>

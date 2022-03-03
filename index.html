@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ocean View Colombo</title>
+        <link rel="icon" type="image/png" href="images/icon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/8e5cb1bab9.js" crossorigin="anonymous"></script>   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
+    </head>
+    <body>
+        <!--Header-->
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/logo1.png"></a>
+                <div class="links">
+                    <ul>
+                        <li><a href="about us.html">ABOUT US</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="Contact Us.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="text-box">
+                <h1>Ocean View Hotel </h1>
+                <h2>Colombo</h2>          
+                <p>- A touch of Sri Lankan hospitality with unique flavour of sea while enjoying the breeze of the ocean -</p>
+                <br>
+                <input type="button" href="" class="menu-btn" id="menu" value="BOOK YOUR STAY">
+                <br>
+                <br>
+            </div>
+            <!--booking-->    
+            <div class="arrow-up"></div>
+            <div class="booking-form">
+                <form id="bookingform" method="post" onsubmit="return checkInputs();">
+                    <div id="booking">
+                        <nav>
+                            
+                            <ul>
+                                <li><label>SELECT ROOM</label></li>
+                                <li>
+                                    <select class="options" id="room">
+                                        <option value="single">Single Room</option>
+                                        <option value="double">Double Room</option>
+                                        <option value="luxury">Luxury Room</option>   
+                                    </select>
+                                     
+                                </li>
+                                <label style="color: whitesmoke;">.....</label>
+                               </ul>
+                               <ul>
+                                <li><label>CHECK IN</label></li>
+                                <li><input type="date" class="input" id="check-in">
+                                    
+                                </li>
+                                <label id="checkinerror" style="color: whitesmoke;">....</label> 
+                               </ul>
+                               <ul>
+                                <li><label>CHECK OUT</label></li>
+                                <li><input type="date" class="input" id="check-out"></li>
+                                <li><label id="checkouterror" style="color: whitesmoke;">...</label></li> 
+                               </ul>
+                               <ul>
+                                
+                                <li><label>ADULTS</label></li>
+                                <li><select class="options" id="adults">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select></li>
+                                    <label id="adulterror" style="color: whitesmoke;">...</label> 
+                                
+                               </ul>    
+                               <ul>
+                                
+                                <li><label>CHILDREN</label></li>
+                                <li><select class="options" id="children">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select></li>
+                                    <label style="color: whitesmoke;">.....</label>
+                               </ul>
+                               <ul>
+                               <li><input type="submit" class="btn-design" value="CHECK ROOMS"></li>
+                               </ul>
+                        </nav>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var arrow = $(".arrow-up")
+                var form = $(".booking-form")
+                var status = false;
+                $("#menu").click(function(event){
+                   event.preventDefault();
+                   if(status == false)
+                   {
+                       arrow.fadeIn();
+                       form.fadeIn();
+                       status = true;
+                   } 
+                   else
+                   {
+                       arrow.fadeOut();
+                       form.fadeOut();
+                       status = false;
+                   }
+                })
+            })
+        </script>
+        <br><br><br><br>
+
+        <!--Hotel-Details-->
+        <section class="hotel-details">
+            <div class="details">
+                <div class="details-hotel">
+                    <h1>EXPLORE THE DIVINE DESTINATION</h1>
+                    <br><br>
+                    <p>Perched the white sands of Mount Lavinia,<br>
+                        one of the best beach stretches and blissful scene on this island.<br>
+                        Rooms and suites enjoy unrivalled coastal views<br>
+                        and their indulgent design promotes wellness and attracts <br>
+                        the tourists with absolute tranquility.<br>
+                        Facilities at our boutique hotel include a restaurant,<br>
+                        20-metre swimming pool and direct access onto an ivory sand beach.<br>
+                        Located just 30-minutes drive from Colombo</p>
+                </div>
+                <div class="details-hotel">
+                    <img src="images/aboutpic.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!--Hotel-Location-->
+        <section class="loaction">
+                <div class="hotel-location">
+                    <h1>Locate Us</h1>
+                    <br>
+                </div>
+                <div class="hotel-location">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.982439357294!2d79.85147151474308!3d6.892703495019394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25bdddc367d93%3A0x2fa2e8d7baea285b!2sOcean%20View%20Tower!5e0!3m2!1sen!2slk!4v1625335964496!5m2!1sen!2slk"
+                    width="1519" height="550" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+        </section>
+
+        <!--Facilities-->
+        <section class="facilities">
+            <h1>Our Facilities</h1>
+            <p>- Explore our exclusive facilities -</p>
+
+            <div class="fac-main">
+                <div class="fac-hotel">
+                    <img src="images/pool.png">
+                    <h2>Infinity Pool</h2>
+                </div>
+                <div class="fac-hotel">
+                    <img src="images/room.png">
+                    <h2>Luxury Rooms</h>
+                </div>
+                <div class="fac-hotel">
+                    <img src="images/restaurant.png">
+                    <h2>Restaurant & Bar</h2>
+                </div>
+            </div>
+        </section>
+
+        <!--testimonials-->
+        <section class="testimonials">
+            <h1>What Our Precious Guests Says</h1>
+            
+            <div class="testimonials-row">
+                <div class="testimonial-hotel">
+                    <p>" One of the best place to do sea diving and surfing.<br>
+                        hospitality with some awesome foods.<br>
+                        Highly recommended "</p>
+                    <h2>Kavindu Samarasinghe</h2>
+                    <h3>Sri Lanka</h3>
+                    <i class="fas fa-star fa-sm"></i>
+                    <i class="fas fa-star fa-sm"></i>
+                    <i class="fas fa-star fa-sm"></i>
+                    <i class="fas fa-star fa-sm"></i>
+                    <i class="fas fa-star fa-sm"></i> 
+                </div>
+                <div class="testimonial-hotel">
+                    <p>" The rooms were clean, very comfortable,<br> and the staff was amazing. They went over <br> 
+                        and beyond to help make our stay enjoyable.<br> I highly 
+                        recommend this hotel for anyone"</p>
+                    <h2>Alex Wood</h2>
+                    <h3>United Kingdom</h3>
+                    <i class="fas fa-star fa-sm"></i>
+                    <i class="fas fa-star fa-sm"></i>
+                    <i class="fas fa-star fa-sm"></i>
+                    <i class="fas fa-star fa-sm"></i>
+                    <i class="far fa-star fa-sm"></i>
+                </div>
+                <div class="testimonial-hotel">
+                    <p>" Overall, I had a great experience with the <br>
+                        Hotel staff was incredibly helpful,<br>and the amenities were great.<br>
+                        The room was wonderful, clean, and perfect."</p>
+                    <h2>Kate Roland</h2>
+                    <h3>Australia</h3>
+                    <i class="fas fa-star fa-sm"></i>
+                    <i class="fas fa-star fa-sm"></i> 
+                    <i class="fas fa-star fa-sm"></i> 
+                    <i class="fas fa-star fa-sm"></i> 
+                    <i class="fas fa-star-half-alt fa-sm"></i>
+                </div>
+            </div>
+        </section>
+        
+        <!--Footer-->
+        <section>
+            <div class="footer">
+                <div class="logo">
+                    <img src="images/logo1.png" width="200"><br><br>
+                    <a href="TermsAndConditions.html">Terms and Conditons</a> | <a href="Privacy Policy.html">Privacy Policy</a>
+                </div>
+                <div class="logo">
+                    <ul type="none">
+                    <li><i class="fa fa-home fa-lg"></i>&nbsp 35 College Avenue,<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Dehiwala,<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Mount Lavinia</li><br>
+                    <li><i class="fa fa-envelope"></i>&nbsp&nbsp; oceanviewcolombo@gmail.com</li><br>
+                    <li><i class="fa fa-phone-square-alt fa-lg"></i>&nbsp&nbsp; 0715639188</li><br>
+                    <li>Follow Us</li>
+                    </ul>
+                    <i class="fa fa-facebook-official fa-lg"></i>&nbsp&nbsp;
+                    <i class="fa fa-twitter-square fa-lg"></i>&nbsp&nbsp;
+                    <i class="fa fa-instagram fa-lg"></i>&nbsp&nbsp;
+                </div>
+                <div class="logo">
+                    <p>Subscribe for offers and<br> more</p>
+                    <input type="email" name="email" id="subs" size="35" placeholder="Enter Your Email">
+                    <script>
+                        function subscribe()
+                        {
+                            if(subs.value.length > 0)
+                            {
+                                alert("You have been successfully subscribed!");
+                            }
+                            else
+                            {
+                                alert("Please enter your e-mail address");
+                            }
+                        }
+                    </script>
+                    <button style="margin-left: 0%; padding: 9px;" type="submit" name="subsrcibe" value="Subscribe" onclick="subscribe();">Subscribe</button><br><br>
+                    <p style="font-size: 12px;">All copyrights reserved by Hotel Ocean View <i class="fa fa-copyright"></i></p>
+                </div>
+            </div>
+        </section>
+        <hr style="height: 10px; width: 100%; background-color: rgb(20, 136, 245); color:rgb(20, 136, 245); border-width: 0;" >
+        <script type="text/javascript" src="home.js">
+            
+        </script>
+        
+    </body>
+</html>

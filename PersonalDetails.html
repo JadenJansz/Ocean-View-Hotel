@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Payment - Ocean View Hotel</title>
+        <link rel="stylesheet" href="Personal Details.css">
+        <link rel="icon" type="image/png" href="images/icon.png">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/8e5cb1bab9.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+         <!--Header-->
+         <section class="header">
+            <nav>
+                <a href="home.html"><img src="images/logo1.png"></a>
+            </nav>
+            <div class="text-box">
+                <h1>Ocean View Hotel </h1>
+                <br>
+                <h2>Colombo</h2>          
+                <br>
+            </div>
+        </section>
+        <br><br>
+
+<!--Booking Form-->
+<section class="reservation">
+    <h1 align="center" style="font-size: 40px;">Reservation Details</h1>
+    <form id="rsv-form">
+    <div class="rsv-main">
+    <div class="booking-details">
+        <div class="rsv-data">
+            <label>Room Name :</label>&nbsp&nbsp&nbsp<input type="text" name="rname" id="rname" size="150px" readonly>    
+        </div>
+        <div class="rsv-data">
+            <label>Check-In :</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="chkin" id="chkin" size="150px" readonly>   
+        </div>
+        <div class="rsv-data">
+            <label>Check-Out :</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="chkout" id="chkout" size="150px" readonly>  
+        </div>
+        <div class="rsv-data">
+            <label>Adult Count :</label>&nbsp&nbsp&nbsp&nbsp<input type="text" name="adult" id="adult" size="150px" readonly> 
+        </div>
+        <div class="rsv-data">
+            <label>Child Count :</label>&nbsp&nbsp&nbsp&nbsp<input type="text" name="child" id="child" size="150px" readonly>   
+        </div>
+        <div class="rsv-data">
+            <label>Final Price :</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="final" id="final" size="150px" readonly>   
+        </div>
+    </div>
+    <div class="rsv-pic">
+        <img src="booking11.jpg">
+    </div>
+    </div>
+    </form>
+</section>
+<!--Form-->
+        <section class="contact">
+            <h1 align="center" style="font-size: 40px;">Finalize Your Stay</h1>
+            <form id="contactform" method="post" onsubmit="return checkInputs();">
+        <div class="main">
+            <div class="guest">
+                <h3>Guest Details</h3><br>
+                <div class="form-control">
+                    <label>First Name</label>
+                    <input type="text" name="fname" id="fname" size="150px">
+                    <small id="ename">Error Message</small>
+                </div>
+                <div class="form-control">
+                    <label>Last Name</label>
+                    <input type="text" name="lname" id="lname">
+                    <small>Error Message</small>
+                </div>
+                <div class="form-control">
+                    <label>Title</label><br>
+                    <select name="title" id="title">
+                        <option value="Mr">Mr.</option>
+                        <option value="Mrs">Mrs.</option>
+                        <option value="Ms">Ms.</option>
+                        <option value="Dr">Dr.</option>
+                    </select>
+                    <small>Error Message</small>
+                </div>
+                <div class="form-control">
+                    <label>E-mail</label>
+                    <input type="text" name="email" id="email">
+                    <small>Error Message</small>
+                </div>
+                <div class="form-control">
+                    <label>Contact Number</label>
+                    <input type="text" name="telcontact" id="telcontact">
+                    <small>Error Message</small>
+                </div>
+            </div>
+        <div class="payment">
+            <h3>Payment Details</h3><br>
+            <div class="form-control">
+                <label>Credit Card Number</label>
+                <input type="text" name="cardnum" id="cardnum" size="100px">  
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label>Name On Card</label>
+                <input type="text" name="cardname" id="cardname">
+                <small>Error Message</small>
+             </div>
+             <div class="form-control">
+                <label>Expiration Date :</label>
+                <div style="display: flex; gap: 3rem;">
+                <div>
+                    <label>Month</label><br>
+                    <select style="width: 7rem;" name="month" id="month">
+                         <option value="0" disabled selected></option>
+                        <option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option>
+                        <option value="07">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
+                    </select>
+                    <small>Error Message</small>
+                </div>
+                <div>
+                    <label>Year</label><br>
+                    <select style="width: 7rem;" name="year" id="year">
+                        <option value="0" disabled selected></option>
+                        <option value="1">2021</option><option value="2">2022</option><option value="3">2023</option><option value="4">2024</option><option value="5">2025</option><option value="6">2026</option>
+                        <option value="07">2027</option><option value="8">2028</option><option value="9">2029</option><option value="10">2029</option><option value="11">2030</option><option value="12">2031</option>
+                    </select>
+                    <small>Error Message</small>
+                </div>
+            </div>
+             </div>
+             <div class="form-control">
+                <label>Security Code</label>
+                <input type="text" name="code" id="code">
+                <small>Error Message</small>
+             </div>
+             <div style=" display:flex; gap: 1.5rem;">
+                 <img src="visa.jpg" height="60" width="110">
+                 <img src="Mastercard.jpg" height="60" width="110">
+                 <img src="American.png" height="60" width="90">
+                 <img src="paypal.png" height="60" width="110">
+             </div>
+         </div>
+    </div>
+    <div style="margin-top: 3rem; margin-left: 10rem;">
+        Special Requests :
+        <textarea name="requests" id="requests" rows="4"></textarea>
+        <br><p>This reservation cannot be cancelled or modified. In case of no-show, a penalty of 100% will apply.</p><br>
+        <input type="checkbox" name="agree" id="agree" style="width: 20px; height: 20px;">&nbsp&nbsp&nbsp By choosing to book, I acknowledge having read and agreed to the terms and conditions and privacy policy.    
+    </div>
+    <button style="margin-left: 35rem; width: 20rem;" type="submit" name="submit">Book</button>
+    </form>
+</section>
+<br><br><br>
+ <!--Footer-->
+ <section>
+    <div class="footer">
+        <div class="logo">
+            <img src="images/logo1.png" width="200"><br><br>
+            <a href="TermsAndConditions.html">Terms and Conditons</a> | <a href="Privacy Policy.html">Privacy Policy</a>
+        </div>
+        <div class="logo">
+            <ul type="none">
+            <li><i class="fa fa-home fa-lg"></i>&nbsp 35 College Avenue,<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Dehiwala,<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Mount Lavinia</li><br>
+            <li><i class="fa fa-envelope"></i>&nbsp&nbsp; oceanviewcolombo@gmail.com</li><br>
+            <li><i class="fa fa-phone-square-alt fa-lg"></i>&nbsp&nbsp; 0715639188</li><br>
+            <li>Follow Us</li>
+            </ul>
+            <i class="fa fa-facebook-official fa-lg"></i>&nbsp&nbsp;
+            <i class="fa fa-twitter-square fa-lg"></i>&nbsp&nbsp;
+            <i class="fa fa-instagram fa-lg"></i>&nbsp&nbsp;
+        </div>
+        <div class="logo">
+            <p>Subscribe for offers and<br> more</p>
+            <input type="email" name="email" id="subs" size="35" placeholder="Enter Your Email">
+                <script>
+                    function subscribe()
+                    {
+                        if(subs.value.length > 0)
+                        {
+                            alert("You have been successfully subscribed!");
+                        }
+                        else
+                        {
+                            alert("Please enter your e-mail address");
+                        }
+                    }
+                </script>
+            <button style="margin-left: 0%; padding: 9px;" type="submit" name="subscibe" value="Subscribe">Subscribe</button><br><br>
+            <p style="font-size: 12px;">All copyrights reserved by Hotel Ocean View <i class="fa fa-copyright"></i></p>
+        </div>
+    </div>
+</section>
+<hr style="height: 10px; width: 100%; background-color: rgb(20, 136, 245); color:rgb(20, 136, 245); border-width: 0;" >
+        <script type="text/javascript" src="Personal Details.js"></script>
+        
+    </body>
+</html>
+
+
+

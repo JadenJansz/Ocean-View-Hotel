@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(48, 50, 54, 0.7)),url(images/mainpic.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links{
+    flex: 1;
+    text-align: right;
+}
+.links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+.links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(20, 136, 245);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 10px;
+    padding-top: 50px;
+}
+.text-box h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 90px;
+}
+.text-box h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    padding-top: 50px;
+}
+.text-box h3{
+    padding-top: 70px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+}
+.text-box p{
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: darkgray;
+    padding-top: 40px;
+}
+
+/* Terms and Conditions */
+
+.terms{
+    width: 95%;
+    padding-top: 50px;
+    background-color: white;
+    margin-left: 2%;
+}
+
+/*bottom*/
+.bottom{
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(rgba(10, 10, 66, 0.973),rgba(116, 7, 7, 0.75));
+    background-image: url(images/Waves.jpg);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.footer{
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-between; 
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(48, 50, 54, 0.7)),url(images/Waves.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    /*padding:220px 20px;*/
+    padding-top: 120px;
+    margin-left: 5%;
+    box-sizing: border-box;
+    font-size:large;
+    color: white;
+}
+
+.logo ul {
+    list-style-type: none;
+    padding-top: -20px;
+}
+.logo img{
+    padding-top: 140px;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+    font-size: small;
+}
+
+button{
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin: 50px 60px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px;
+    background:rgb(20, 136, 245);
+    color:rgb(252, 249, 249);
+    cursor: pointer;
+    font-size: large;
+}
+
+input[type='email']{
+    padding: 10px;
+    font-size: 15px;
+    width: 65%;
+    border:0.05rem rgb(255, 255, 255) solid;
+}
+
+input[type='text']:focus{
+    border: rgb(235, 241, 241);
+    background-color:rgb(246, 250, 250);
+}

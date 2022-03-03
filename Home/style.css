@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(48, 50, 54, 0.7)),url(images/mainpic.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links{
+    flex: 1;
+    text-align: right;
+}
+.links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+.links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(20, 136, 245);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+.text-box h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 90px;
+}
+.text-box h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+}
+.text-box h3{
+    padding-top: 70px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+}
+.text-box p{
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: darkgray;
+    padding-top: 40px;
+}
+.menu-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+.menu-btn:hover{
+    border: 1px solid rgb(20, 136, 245);
+    background: rgb(20, 136, 245);
+    transition: 0.5s;
+}
+
+/*validation*/
+
+.error{
+    border-color: black;
+}
+
+.form-control.success input{
+    border-color: green;
+}
+
+.form-control.error input{
+    border-color: red;
+}
+
+
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.form-control.error small{
+    color: red;
+    visibility: visible;
+}
+
+/*Hotel-Details*/
+.hotel-details{
+    width: 100%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 90px;
+}
+.details{
+    width: 87%;
+    margin: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+.details-hotel{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.details-hotel img{
+    width: 100%;
+    padding-right:130px;
+}
+.details-hotel h1{
+    padding-top: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    padding-left: 50px;  
+}
+.details-hotel p{
+    padding: 15px 0 25px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    color : #616161;
+    padding-left: 50px;
+}
+
+/*hotel-location*/
+.location{
+    margin: auto;
+    width: 80%;
+    padding-top: 100px;
+    font-size: 30px;
+}
+.hotel-location h1{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+.hotel-location iframe{
+    width: 90%;
+    padding-left: 75px;
+    padding-bottom: 50px;
+}
+
+/*hotel-facilities*/
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+}
+.facilities h1{
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 10px;
+}
+.facilities p{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 40px;
+    color: darkgray;
+}
+.fac-main{
+    flex-basis: 32%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+.fac-hotel img{
+    width: 80%;
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: block;
+    margin-left: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 20px rgba(0,0,0,.5);
+}
+.fac-hotel:hover img{
+    transform: translateY(10px);
+    transition: 0.5s;
+}
+.fac-hotel h2{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*testimonials*/
+.testimonials{ 
+    padding-top: 100px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+}
+.testimonials-row{
+    display: flex;
+    padding:50px;
+    text-align: center;
+    width: auto;
+    justify-content: space-between;
+}
+.testimonial-hotel{
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 0%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+}
+.testimonial-hotel h2{
+    font-size: 25px;
+    padding-top: 15px;
+}
+.testimonial-hotel h3{
+    font-size: 17px;
+    color: lightgray;
+}
+.testimonial-hotel p{
+    font-size: 15px;   
+}
+.testimonial-hotel i{
+    padding-top: 15px;
+    color: #e66c2c;
+    block-size: 10px;
+}
+
+/*bottom*/
+.bottom{
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(rgba(10, 10, 66, 0.973),rgba(116, 7, 7, 0.75));
+    background-image: url(images/Waves.jpg);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.footer{
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-between; 
+    background: linear-gradient(-180deg,#fff,black); 
+    width: 100%;
+    height: 450px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    /*padding:220px 20px;*/
+    padding-top: 120px;
+    margin-left: 5%;
+    box-sizing: border-box;
+    font-size:large;
+    color: white;
+}
+
+.logo ul {
+    list-style-type: none;
+    padding-top: -20px;
+}
+.logo img{
+    padding-top: 140px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: small;
+}
+
+button{
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin: 50px 60px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px;
+    background:rgb(20, 136, 245);
+    color:rgb(252, 249, 249);
+    cursor: pointer;
+    font-size: large;
+}
+
+input[type='email']{
+    padding: 10px;
+    font-size: 15px;
+    width: auto;
+    border:0.05rem rgb(255, 255, 255) solid;
+}
+
+input[type='text']:focus{
+    border: rgb(235, 241, 241);
+    background-color:rgb(246, 250, 250);
+}
+
+
+/*booking*/
+#booking {  
+    margin: 5px 10px;
+}
+#booking ul{
+    list-style: none;
+    padding-left: 5px;
+}
+#booking ul li{
+}
+
+/*.arrow-up{
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #fff;
+    right: 150px;
+    top: 85px;
+    display: none;
+}*/
+.booking-form{
+    position: absolute;
+    width: 95%;
+    height: 120px;
+    background: whitesmoke;
+    right: 39px;
+    top: 565px;
+    border-radius: 5px;
+    border-bottom: 10px solid rgb(20, 136, 245);
+    display: none;
+}
+input[type="date"],
+select{
+    width: 165px;
+    height: 30px;
+    border:0px;
+    outline: none;
+    box-shadow: inset 0 0 3px rgb(20, 136, 245);
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    color: #999999;
+    font-weight: bold;
+}
+.btn-design{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(129, 111, 111);
+    border: 1px solid black;
+    padding: 10px 30px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+.btn-design:hover{
+    border: 1px solid  rgb(20, 136, 245);
+    background:  rgb(20, 136, 245);
+    transition: 0.5s;
+    color: #fff;
+}
